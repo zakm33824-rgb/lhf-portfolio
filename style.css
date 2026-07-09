@@ -1117,3 +1117,85 @@ body::after {
   bottom: 0 !important;
 }
 
+
+/* ===== 紧急修复：防止内容被隐藏 ===== */
+.reveal,
+.reveal.visible,
+section,
+.hero,
+.about,
+.contact,
+.project-card,
+.card,
+.skill-card,
+.work-card,
+.photo-card,
+.hero-card {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+
+/* ===== 修复：允许正常滚动，只去掉底部多余空白 ===== */
+html,
+body {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  height: auto !important;
+  min-height: 100% !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+body {
+  position: relative !important;
+}
+
+main {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+section:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+footer,
+.footer {
+  margin-bottom: 0 !important;
+  padding-bottom: 28px !important;
+}
+
+
+/* ===== 修复：允许正常滚动，只去掉底部多余空白 ===== */
+html,
+body {
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  height: auto !important;
+  min-height: 100% !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+body {
+  position: relative !important;
+}
+
+main {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+section:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+footer,
+.footer {
+  margin-bottom: 0 !important;
+  padding-bottom: 28px !important;
+}
+

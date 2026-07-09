@@ -313,60 +313,7 @@ console.log("个人作品展示网站已加载：含动画、项目详情、移�
 
 })();
 
-// ===== 滚动到底部版权处就停止 =====
-(function () {
-  if (window.__STOP_AT_FOOTER__) return;
-  window.__STOP_AT_FOOTER__ = true;
 
-  function findFooterTextElement() {
-    const all = Array.from(document.querySelectorAll("footer, .footer, body *"));
-    return all.find((el) => {
-      const text = (el.innerText || "").replace(/\s/g, "");
-      return text.includes("2026") && text.includes("刘昊锋") && text.includes("个人作品展示网站");
-    });
-  }
-
-  let footerEl = null;
-
-  function getMaxScrollY() {
-    footerEl = footerEl || findFooterTextElement();
-
-    if (!footerEl) {
-      return document.documentElement.scrollHeight - window.innerHeight;
-    }
-
-    const rect = footerEl.getBoundingClientRect();
-    const footerBottomY = window.scrollY + rect.bottom;
-
-    return Math.max(0, footerBottomY - window.innerHeight + 24);
-  }
-
-  let ticking = false;
-
-  window.addEventListener(
-    "scroll",
-    function () {
-      if (ticking) return;
-
-      ticking = true;
-
-      requestAnimationFrame(function () {
-        const maxScrollY = getMaxScrollY();
-
-        if (window.scrollY > maxScrollY) {
-          window.scrollTo({
-            top: maxScrollY,
-            left: 0,
-            behavior: "auto"
-          });
-        }
-
-        ticking = false;
-      });
-    },
-    { passive: true }
-  );
-})();
 
 Add-Content style.css @'
 
@@ -402,57 +349,7 @@ body::after {
 }
 
 
-// ===== 滚动到底部版权处就停止 =====
-(function () {
-  if (window.__STOP_AT_FOOTER__) return;
-  window.__STOP_AT_FOOTER__ = true;
 
-  function findFooterTextElement() {
-    const all = Array.from(document.querySelectorAll("footer, .footer, body *"));
-    return all.find((el) => {
-      const text = (el.innerText || "").replace(/\s/g, "");
-      return text.includes("2026") && text.includes("刘昊锋") && text.includes("个人作品展示网站");
-    });
-  }
 
-  let footerEl = null;
 
-  function getMaxScrollY() {
-    footerEl = footerEl || findFooterTextElement();
 
-    if (!footerEl) {
-      return document.documentElement.scrollHeight - window.innerHeight;
-    }
-
-    const rect = footerEl.getBoundingClientRect();
-    const footerBottomY = window.scrollY + rect.bottom;
-
-    return Math.max(0, footerBottomY - window.innerHeight + 24);
-  }
-
-  let ticking = false;
-
-  window.addEventListener(
-    "scroll",
-    function () {
-      if (ticking) return;
-
-      ticking = true;
-
-      requestAnimationFrame(function () {
-        const maxScrollY = getMaxScrollY();
-
-        if (window.scrollY > maxScrollY) {
-          window.scrollTo({
-            top: maxScrollY,
-            left: 0,
-            behavior: "auto"
-          });
-        }
-
-        ticking = false;
-      });
-    },
-    { passive: true }
-  );
-})();
