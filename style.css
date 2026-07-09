@@ -1085,3 +1085,35 @@ a, button, .btn {
   }
 }
 
+
+/* ===== 页面底部停止滚动修复 ===== */
+html,
+body {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  overflow-x: hidden !important;
+  overscroll-behavior-y: none;
+}
+
+main,
+.container,
+.page,
+.content {
+  margin-bottom: 0 !important;
+}
+
+section:last-of-type {
+  margin-bottom: 0 !important;
+  padding-bottom: 40px !important;
+}
+
+footer,
+.footer {
+  margin-bottom: 0 !important;
+  padding-bottom: 28px !important;
+}
+
+body::after {
+  bottom: 0 !important;
+}
+
