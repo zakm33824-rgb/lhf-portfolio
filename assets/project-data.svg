@@ -1,0 +1,7 @@
+﻿<svg width="900" height="520" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="520" rx="30" fill="#ecfeff"/>
+  <rect x="70" y="80" width="210" height="330" rx="20" fill="#0f766e"/>
+  <rect x="345" y="150" width="210" height="260" rx="20" fill="#14b8a6"/>
+  <rect x="620" y="220" width="210" height="190" rx="20" fill="#99f6e4"/>
+  <text x="450" y="470" font-size="38" fill="#0f172a" text-anchor="middle" font-family="Microsoft YaHei">Q3 销售数据分析</text>
+</svg>

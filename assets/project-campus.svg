@@ -1,0 +1,7 @@
+﻿<svg width="900" height="520" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="520" rx="30" fill="#fff7ed"/>
+  <circle cx="250" cy="250" r="120" fill="#f97316"/>
+  <rect x="430" y="150" width="320" height="210" rx="32" fill="#111827"/>
+  <text x="590" y="270" font-size="42" fill="white" text-anchor="middle" font-family="Microsoft YaHei">校园易购</text>
+  <text x="450" y="455" font-size="36" fill="#0f172a" text-anchor="middle" font-family="Microsoft YaHei">创业项目展示</text>
+</svg>
