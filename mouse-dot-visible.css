@@ -1,0 +1,64 @@
+﻿/* ===== 最终可见鼠标定位光点 ===== */
+
+/* 关闭旧鼠标特效 */
+.cursor-aura,
+#cursor-ring,
+#cursor-dot,
+#mouse-position-marker,
+#mouse-position-marker-final {
+    display: none !important;
+}
+
+/* 新光圈：用 CSS 变量移动，避免 transform !important 卡死 */
+#mouse-dot-visible {
+    display: block !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 999px !important;
+
+    border: 3px solid #ffffff !important;
+    background: rgba(94, 234, 212, 0.16) !important;
+
+    pointer-events: none !important;
+    z-index: 2147483647 !important;
+
+    transform: translate3d(var(--mouse-x, -999px), var(--mouse-y, -999px), 0) translate(-50%, -50%) !important;
+    will-change: transform !important;
+
+    box-shadow:
+        0 0 0 3px rgba(94, 234, 212, 1),
+        0 0 16px rgba(255, 255, 255, 1),
+        0 0 34px rgba(94, 234, 212, 1),
+        0 0 62px rgba(59, 130, 246, 0.95) !important;
+}
+
+/* 中心小白点，准确表示鼠标点的位置 */
+#mouse-dot-visible::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 999px !important;
+
+    background: #ffffff !important;
+    transform: translate(-50%, -50%) !important;
+
+    box-shadow:
+        0 0 10px rgba(255,255,255,1),
+        0 0 22px rgba(94,234,212,1) !important;
+}
+
+/* 悬停可点击元素时放大 */
+html.mouse-dot-hover #mouse-dot-visible {
+    width: 54px !important;
+    height: 54px !important;
+    border-color: #5eead4 !important;
+    background: rgba(94, 234, 212, 0.26) !important;
+}

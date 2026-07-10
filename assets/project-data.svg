@@ -1,7 +1,78 @@
-﻿<svg width="900" height="520" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg">
-  <rect width="900" height="520" rx="30" fill="#ecfeff"/>
-  <rect x="70" y="80" width="210" height="330" rx="20" fill="#0f766e"/>
-  <rect x="345" y="150" width="210" height="260" rx="20" fill="#14b8a6"/>
-  <rect x="620" y="220" width="210" height="190" rx="20" fill="#99f6e4"/>
-  <text x="450" y="470" font-size="38" fill="#0f172a" text-anchor="middle" font-family="Microsoft YaHei">Q3 销售数据分析</text>
+<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFF7ED"/>
+      <stop offset="0.42" stop-color="#FFE4E6"/>
+      <stop offset="1" stop-color="#FED7AA"/>
+    </linearGradient>
+
+    <linearGradient id="card" x1="120" y1="92" x2="840" y2="462" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#FFF7ED" stop-opacity="0.68"/>
+    </linearGradient>
+
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF5005"/>
+      <stop offset="1" stop-color="#FB923C"/>
+    </linearGradient>
+
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F472B6"/>
+      <stop offset="1" stop-color="#D0BCE1"/>
+    </linearGradient>
+
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#9A3412" flood-opacity="0.20"/>
+    </filter>
+
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="28" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 1  0 0.5 0 0 0.42  0 0 1 0 0.18  0 0 0 0.45 0"/>
+      <feBlend in="SourceGraphic"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" rx="36" fill="url(#bg)"/>
+
+  <circle cx="190" cy="120" r="145" fill="#FF5005" opacity="0.16" filter="url(#softGlow)"/>
+  <circle cx="780" cy="390" r="180" fill="#D0BCE1" opacity="0.32" filter="url(#softGlow)"/>
+  <circle cx="510" cy="260" r="230" fill="#FDBA74" opacity="0.22" filter="url(#softGlow)"/>
+
+  <rect x="112" y="78" width="736" height="384" rx="34" fill="url(#card)" stroke="rgba(255,255,255,0.75)" stroke-width="2" filter="url(#shadow)"/>
+
+  <rect x="154" y="120" width="230" height="50" rx="18" fill="#111827"/>
+  <text x="182" y="153" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="800">智能数据平台</text>
+
+  <rect x="410" y="122" width="128" height="18" rx="9" fill="#FB923C" opacity="0.95"/>
+  <rect x="558" y="122" width="170" height="18" rx="9" fill="#D0BCE1" opacity="0.9"/>
+  <rect x="410" y="152" width="250" height="14" rx="7" fill="#9CA3AF" opacity="0.42"/>
+
+  <rect x="154" y="205" width="160" height="190" rx="24" fill="#FFFFFF" opacity="0.72" stroke="#FED7AA"/>
+  <rect x="180" y="330" width="28" height="38" rx="8" fill="url(#orange)"/>
+  <rect x="222" y="292" width="28" height="76" rx="8" fill="url(#pink)"/>
+  <rect x="264" y="248" width="28" height="120" rx="8" fill="url(#blue)"/>
+  <text x="180" y="235" fill="#431407" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="800">核心指标</text>
+
+  <rect x="344" y="205" width="220" height="190" rx="24" fill="#FFFFFF" opacity="0.62" stroke="#FED7AA"/>
+  <path d="M375 342 C410 292, 442 310, 474 255 C506 202, 526 235, 538 218" stroke="#FF5005" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M374 360 C414 335, 440 345, 478 310 C516 275, 535 296, 548 280" stroke="#2563EB" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.82"/>
+  <circle cx="538" cy="218" r="11" fill="#FF5005"/>
+  <circle cx="548" cy="280" r="9" fill="#2563EB"/>
+  <text x="370" y="235" fill="#431407" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="800">趋势分析</text>
+
+  <rect x="594" y="205" width="210" height="190" rx="24" fill="#FFFFFF" opacity="0.66" stroke="#FED7AA"/>
+  <circle cx="699" cy="300" r="62" fill="none" stroke="#FDBA74" stroke-width="26"/>
+  <path d="M699 238 A62 62 0 0 1 760 311" stroke="#FF5005" stroke-width="26" stroke-linecap="round"/>
+  <path d="M760 311 A62 62 0 0 1 676 358" stroke="#D0BCE1" stroke-width="26" stroke-linecap="round"/>
+  <text x="622" y="235" fill="#431407" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="800">图表洞察</text>
+
+  <rect x="154" y="420" width="650" height="12" rx="6" fill="#FFFFFF" opacity="0.58"/>
+  <rect x="154" y="420" width="475" height="12" rx="6" fill="url(#orange)"/>
+
+  <text x="154" y="452" fill="#7C2D12" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="800">Excel · 数据清洗 · 自动分析 · 图表报告</text>
 </svg>

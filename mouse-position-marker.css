@@ -1,0 +1,44 @@
+﻿
+/* ===== 最终版鼠标定位光点：不被 footer 隐藏 ===== */
+#mouse-position-marker {
+    display: block !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 999px !important;
+    border: 3px solid #ffffff !important;
+    background: rgba(94, 234, 212, 0.16) !important;
+    pointer-events: none !important;
+    z-index: 2147483647 !important;
+    transform: translate3d(-999px, -999px, 0) translate(-50%, -50%) !important;
+    will-change: transform !important;
+    box-shadow:
+        0 0 0 3px rgba(94, 234, 212, 1),
+        0 0 18px rgba(255, 255, 255, 1),
+        0 0 38px rgba(94, 234, 212, 1),
+        0 0 70px rgba(59, 130, 246, 0.95) !important;
+}
+
+#mouse-position-marker::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    width: 9px !important;
+    height: 9px !important;
+    border-radius: 999px !important;
+    background: #ffffff !important;
+    transform: translate(-50%, -50%) !important;
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 1),
+        0 0 22px rgba(94, 234, 212, 1) !important;
+}
+
+body.mouse-marker-hover #mouse-position-marker {
+    width: 58px !important;
+    height: 58px !important;
+    border-color: #5eead4 !important;
+    background: rgba(94, 234, 212, 0.25) !important;
+}

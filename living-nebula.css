@@ -1,0 +1,56 @@
+﻿html,
+body {
+    min-height: 100%;
+    background: #020617 !important;
+}
+
+#living-nebula-bg {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.nebula-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(14, 165, 164, 0.18), transparent 28%),
+        radial-gradient(circle at 80% 10%, rgba(59, 130, 246, 0.16), transparent 30%),
+        linear-gradient(135deg, rgba(15, 23, 42, 0.42), rgba(15, 95, 140, 0.28));
+}
+
+.cursor-aura {
+    position: fixed;
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.32);
+    box-shadow: 0 0 28px rgba(14, 165, 164, 0.65);
+    pointer-events: none;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    transform: translate3d(-100px, -100px, 0);
+    will-change: transform;
+}
+
+body > *:not(#living-nebula-bg):not(.nebula-overlay):not(.cursor-aura) {
+    position: relative;
+    z-index: 1;
+}
+
+section,
+main,
+.hero,
+.projects,
+.contact,
+.contact-section,
+.projects-section {
+    background: transparent !important;
+}
+
